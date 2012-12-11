@@ -22,6 +22,7 @@ src_gen/me_ycy_verilog_vpi_Vpi.h: target/me/ycy/verilog/vpi/Vpi.class
 	javah -d src_gen -classpath target me.ycy.verilog.vpi.Vpi
 
 target/sim.vvp: src/main/verilog/tb.v
+	mkdir -p target
 	$(VLOG) $^ -o $@
 
 target/me/ycy/verilog/vpi/Vpi.class: $(JAVA_SRC)
